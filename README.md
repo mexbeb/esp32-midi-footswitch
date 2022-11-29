@@ -34,23 +34,24 @@ See its functions and how it works here -> https://youtu.be/WgFxVs6B-E0
 I used Arduino IDE and flashed the board as an ESP32 Dev Kit Module.
 
 All the switches have on end to the board and one end to ground.
-The expression pedal TRS jack is defined as:
 
-•TIP -> Vcc
+### The expression pedal TRS jack is defined as:
 
-•RING -> pin on the board
+•TIP -> Vcc (3V3)
 
-•SLEEVE -> Gnd
-
-The aux TRS jack is defined as:
-
-•TIP -> aux 1 pin on the board
-
-•RING -> aux 2 pin on the board
+•RING -> pin on the board (PIN_VOLUME)
 
 •SLEEVE -> Gnd
 
-The pin mapping can be checked in the Arduino code and is the following:
+### The aux TRS jack is defined as:
+
+•TIP -> aux 1 pin on the board (aux1in)
+
+•RING -> aux 2 pin on the board (aux2in)
+
+•SLEEVE -> Gnd
+
+### The pin mapping can be checked in the Arduino code and is the following:
 
 ```
 #define buttonup 33
