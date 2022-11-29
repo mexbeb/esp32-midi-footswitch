@@ -33,7 +33,15 @@ See its functions and how it works here -> https://youtu.be/WgFxVs6B-E0
 
 I used Arduino IDE and flashed the board as an ESP32 Dev Kit Module.
 
-All the switches have on end to the board and one end to ground.
+All the switches have one end to the board and one end to ground.
+
+The pedal sends MIDI CCs and it has 3 banks, each one of the bank has different values for the right and left switches. More banks can be added mapping the switches to other CCs by changing the code.
+
+The switches can be programmed to respond to single, double and long press clicks thanks to the avdweb_Switch library. No debounce is needed.
+
+The encoders are not the version with the breakout board and the 10K resistors, they are just the encoder itself. Their function is implemented with the AiEsp32Rotary library by using internal pullup resistors and ISRs.
+
+Thanks to this strategy and the implementation using these libraries, the parts count is low.
 
 ### The expression pedal TRS jack is defined as:
 
