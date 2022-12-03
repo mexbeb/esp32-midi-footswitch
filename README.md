@@ -2,6 +2,8 @@
 
 ## An open-source fully programmable BLE MIDI footswitch
 
+03/12/2022 UPDATE -> New version of the code with 6 banks!
+
 With this project you'll build your own footswitch MIDI controller which is connected to your PC via a Bluetooth Low Energy connection!
 
 See its functions and how it works here -> https://youtu.be/WgFxVs6B-E0
