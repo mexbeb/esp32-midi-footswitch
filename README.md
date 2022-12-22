@@ -3,6 +3,7 @@
 ## An open-source fully programmable MIDI footswitch
 
 03/12/2022 UPDATE -> New version of the code with 6 banks!
+
 22/12/2022 UPDATE #2 -> New version with Wi-Fi connection (rtpMIDI)!
 
 With this project you'll build your own footswitch MIDI controller which is connected to your PC via a Bluetooth Low Energy or Wi-Fi connection!
