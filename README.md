@@ -14,7 +14,7 @@ See its functions and how it works here -> https://youtu.be/WgFxVs6B-E0
 
 ### You'll need:
 
-• An ESP32 board with BLE (I used an Az-Delivery ESP32 board)
+• An ESP32 board with BLE and Wi-Fi (I used an Az-Delivery ESP32 board)
 
 • N.O. switches (I used two momentary and one latching switch)
 
