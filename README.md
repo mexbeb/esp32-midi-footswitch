@@ -1,10 +1,11 @@
-# ESP32 BLUETOOTH LOW ENERGY MIDI FOOTSWITCH
+# ESP32 MIDI FOOTSWITCH [BLE & WI-FI]
 
-## An open-source fully programmable BLE MIDI footswitch
+## An open-source fully programmable MIDI footswitch
 
 03/12/2022 UPDATE -> New version of the code with 6 banks!
+22/12/2022 UPDATE #2 -> New version with Wi-Fi connection (rtpMIDI)!
 
-With this project you'll build your own footswitch MIDI controller which is connected to your PC via a Bluetooth Low Energy connection!
+With this project you'll build your own footswitch MIDI controller which is connected to your PC via a Bluetooth Low Energy or Wi-Fi connection!
 
 See its functions and how it works here -> https://youtu.be/WgFxVs6B-E0
 
@@ -89,6 +90,32 @@ Thanks to this strategy and the implementation using these libraries, the parts 
   ```
 You can change it according to the board you're using.
 
+### BLE version
+
+Just connect your device as a simple BT MIDI device.
+
+### Wi-Fi Version Connection Guide on MacOS
+
+Flashing the Wi-Fi version of the code will turn the ESP32 into an access point with SSID __ESP32rtp__ and password __esp_32_midi@@@__.
+
+As long as you turn on the board, the AP will appear in the network list and you have to connect to it.
+
+<img width="289" alt="AP" src="https://user-images.githubusercontent.com/74735686/209116272-a78fc112-53ef-4c92-a306-7d96c7166d0f.png">
+
+Open MIDI-Audio configuration, go to window -> show MIDI Studio and go to the network config (the icon near the bluetooth icon).
+
+Add a new session (1) and call it __Arduino with Host__.
+
+<img width="781" alt="MA" src="https://user-images.githubusercontent.com/74735686/209116754-6a1064e8-14ee-4fe5-838c-fc3b03abdf50.png">
+
+Then in the directory section(2) add a new device, call it ESP32 and put the IP address of the ESP32 (you can find it by using any kind of IP scanner, in my case it was 192.168.4.1). The port is __5004__ by default.
+
+<img width="781" alt="IP" src="https://user-images.githubusercontent.com/74735686/209116815-4e00a5ee-aa05-4bee-bca6-881f8e7b08c2.png">
+
+Select the device you just created and click on connect (3), the connection light on the pedal will turn on and you're ready to go!
+
+<img width="781" alt="MA2" src="https://user-images.githubusercontent.com/74735686/209116865-028dd888-f686-4d3d-a03b-faa7ee701413.png">
+
 ## Disclaimer
 
 The code is not perfect and it can be surely improved.
@@ -104,3 +131,5 @@ But it works and for me is perfect that way.
 • igorantolic for the rotary enc library -> https://github.com/igorantolic/ai-esp32-rotary-encoder
 
 • jeffb42 for his work on how to implement an expression pedal with arduino -> https://www.codeproject.com/Articles/38203/Arduino-Based-MIDI-Expression-Pedal
+
+• lathoub for the Arduino AppleMIDI library -> https://github.com/lathoub/Arduino-AppleMIDI-Library
